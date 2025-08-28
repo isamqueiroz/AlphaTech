@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  background: linear-gradient(180deg, #0d0d0d, #1a1a1a, #3a3a3a);
+  color: white;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #0d0d0d;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo img {
+  height: 70px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header nav a {
+  color: #ffd699;
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: #ff6a00;
+}
+
+/* caixona */
+.caixona {
+  text-align: center;
+  padding: 120px 20px;
+  background: radial-gradient(circle, rgba(255, 106, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  color: #fff;
+}
+
+.caixona h1 {
+  font-size: 50px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.caixona h1 span {
+  background: linear-gradient(90deg, #ffb266, #ffd699);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.caixona p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+.caixona button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: #000000;
+  color: white;
+  transition: 0.3s;
+}
+
+.caixona button:hover {
+  background: linear-gradient(90deg, #ff6a00, #ff7a1a);
+}
+
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 80px 50px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h2 {
+  background: linear-gradient(90deg, #ff6a00, #ff7a1a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.4);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0d0d0d;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .caixona h1 {
+    font-size: 2rem;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
