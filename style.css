@@ -1,12 +1,12 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: "JetBrains Mono", monospace;
 }
 
+/* BODY */
 body {
   background: linear-gradient(180deg, #0d0d0d, #1a1a1a, #3a3a3a);
   color: white;
@@ -25,31 +25,49 @@ header {
   z-index: 10;
 }
 
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 header .logo img {
   height: 70px;
 }
 
-header .logo {
-  display: flex;
-  align-items: center;
-  font-size: 13px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+header .logo h1 {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6a00, #ffcc70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
 }
 
+header .logo h1 span {
+  font-size: 18px;
+  font-weight: normal;
+  color: #ccc;
+  background: none;
+  -webkit-text-fill-color: #ccc;
+}
+
+/* NAV */
 header nav a {
-  color: #ffd699;
+  color: #ffcc70;
   margin-left: 30px;
   text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  transition: 0.3s;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 header nav a:hover {
   color: #ff6a00;
+  text-shadow: 0 0 6px rgba(255, 106, 0, 0.8);
 }
 
-/* caixona */
+/* HERO */
 .caixona {
   text-align: center;
   padding: 120px 20px;
@@ -59,11 +77,10 @@ header nav a:hover {
 
 .caixona h1 {
   font-size: 50px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .caixona h1 span {
-  background: linear-gradient(90deg, #ffb266, #ffd699);
+  background: linear-gradient(90deg, #ff6a00, #ffcc70);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -85,10 +102,12 @@ header nav a:hover {
 }
 
 .caixona button:hover {
-  background: linear-gradient(90deg, #ff6a00, #ff7a1a);
+  background: linear-gradient(90deg, #ff6a00, #ffcc70);
+  color: #000;
+  font-weight: bold;
 }
 
-
+/* CARDS */
 .cards {
   display: flex;
   justify-content: center;
@@ -108,7 +127,7 @@ header nav a:hover {
 }
 
 .card h2 {
-  background: linear-gradient(90deg, #ff6a00, #ff7a1a);
+  background: linear-gradient(90deg, #ff6a00, #ffcc70);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
@@ -116,7 +135,89 @@ header nav a:hover {
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.5);
+}
+
+/* INFO */
+.info {
+  background: linear-gradient(158deg, rgba(0, 0, 0, 1) 14%, rgba(74, 31, 0, 1) 75%, rgba(255, 106, 0, 1) 100%);
+}
+
+.conheca-nos {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.conheca-nos h1 {
+  background: linear-gradient(90deg, #ff6a00, #ffcc70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding: 10px;
+}
+
+/* SERVIÇOS & DEPOIMENTOS */
+.servicos, .depoimentos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+  .depoimentos{
+    background: #000000;
+background: linear-gradient(158deg, rgba(0, 0, 0, 1) 14%, rgba(74, 31, 0, 1) 79%, rgba(255, 106, 0, 1) 100%);
+  }
+
+.servicos h1, .depoimentos h1, .contato h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #ff6a00, #ffcc70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CONTATO */
+.contato {
+  padding: 60px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.contato form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato input, .contato textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.contato textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.contato button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff6a00, #ffcc70);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contato button:hover {
+  opacity: 0.9;
 }
 
 /* FOOTER */
@@ -126,6 +227,21 @@ footer {
   background: #0d0d0d;
   font-size: 0.9rem;
   color: #aaa;
+}
+
+footer .social {
+  margin-top: 10px;
+}
+
+footer .social a {
+  color: #ffcc70;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+footer .social a:hover {
+  color: #ff6a00;
 }
 
 /* RESPONSIVO */
